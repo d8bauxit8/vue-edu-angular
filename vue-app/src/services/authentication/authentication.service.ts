@@ -1,5 +1,7 @@
 import type { Router } from 'vue-router'
 
+import { SERVICE_STATUS_PATH } from '@/modules/service-status/constants/route.constants'
+
 export const LOCAL_STORAGE_TOKEN_KEY = 'TOKEN'
 export const LOCAL_STORAGE_TOKEN_VALUE = '123'
 
@@ -14,6 +16,6 @@ export default class AuthenticationService {
 
   login(): void {
     localStorage.setItem(LOCAL_STORAGE_TOKEN_KEY, LOCAL_STORAGE_TOKEN_VALUE)
-    this.router.push('TODO')
+    this.router.push(SERVICE_STATUS_PATH)
   }
 }
